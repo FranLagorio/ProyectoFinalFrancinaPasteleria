@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device=width, initial-scale=1.0" />
+        <title>Francina Pasteleria Artesanal</title>
+        <link rel="stylesheet" href="css/animate.css" />
+        <link rel="stylesheet" href="CSS/bootstrap.css" />
+
+        <link rel="stylesheet" href="CSS/estilosSass.css" />
+        <script src="https://kit.fontawesome.com/0fe480d2f7.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <nav id="navMobile">
+                <a href="index.html">
+                    <img
+                        class="logoMediaQueries"
+                        src="images/logo/LOGO IMPRENTA-03.png"
+                        alt="logo Francinapasteleria"
+                    />
+                </a>
+
+                <div class="dropdown">
+                    <a
+                        class="btn dropdown-toggle boton-menu negrita"
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="index.html">⚫ Inicio</a>
+                        <a class="dropdown-item" href="catalogo.html">⚫ Catalogo</a>
+                        <a class="dropdown-item " href="pedido.html">⚫ Hacenos tu pedido!</a>
+                        <a class="dropdown-item  negrita" href="historia.html">⚫ Nuestra Historia</a>
+                        <a class="dropdown-item" href="informacion.html">⚫ Informacion</a>
+                    </div>
+                </div>
+
+                <p>Amor a primera mordida</p>
+            </nav>
+
+            <nav id="navDesktop">
+                <ul class="ulNav">
+                    <li><a class="negrita" href="catalogo.html"> Catologo </a></li>
+                    <li><a href="pedido.html">Hace tu pedido</a></li>
+
+                    <li>
+                        <a style="background: none" href="index.html"
+                            ><img class="logo" src="images/logo/LOGO IMPRENTA-03.png"
+                        /></a>
+                    </li>
+
+                    <li><a class="negrita" href="historia.html">Nuestra Historia</a></li>
+                    <li><a href="informacion.html">Informacion </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Nuestra Historia</h2>
+
+            <div class="container ">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 textoNuestraHistoria negrita">
+                        <p>
+                            Hola 👋👋 !! <br>
+                            
+                            <p>Mi nombre es Eugenia, tengo 25 años y soy de Cordoba Capital.</p>
+
+                            <p>Soy licenciada en Marketing👩‍💼 y Pastelera Profesional 👩🏽‍🍳.</p> 
+                            
+                            <p>Francina nace de un hobbie por la pasteleria. Lleva el nombre de mi primita
+                            porque decidi emprender justo en el mismo momento en que ella nacio.</p>
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non incidunt
+                            eveniet, fugiat dolor at quo. Laborum aliquid repellendus rerum, voluptas
+                            animi eligendi dicta ex culpa officiis veritatis nam, quasi minima!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non incidunt
+                            eveniet, fugiat dolor at quo. Laborum aliquid repellendus rerum, voluptas
+                            animi eligendi dicta ex culpa officiis veritatis nam, quasi minima!
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <img class="imagenNuestraHistoria" src="images/fotos/fotoEuge.jpg" alt="FotografiaEugeniaPasteleria">
+                    </div>
+                    
+                </div>
+        </main>
+
+        <footer class="wow fadeInUp footerNuestraHistoria " data-wow-delay="0.1s" data-wow-duration="0.5s">
+            <h2>Nuestras Redes</h2>
+            <div id="Redes">
+                <a href="https://www.instagram.com/francinapasteleria/?hl=es-la" target="_blank"
+                    ><img
+                        class="logoInstFace"
+                        src="images/logo/instagram.png"
+                        alt="Logo Instagram"
+                    />
+                </a>
+                <a href="https://www.facebook.com/Francinapasteleria" target="_blank"
+                    ><img class="logoInstFace" src="images/logo/facebook.png" alt="Logo facebook" />
+                </a>
+            </div>
+            <p>Sitio Web creado por Francisco Lagorio ®</p>
+        </footer>
+
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+        >
+        </script>
+        <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+         >
+        </script>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"
+         >
+        </script>
+        <script src="js/wow.min.js">
+        </script>
+        <script src="js/main.js">
+         </script>
+        <script type="text/javascript">
+                function showContent() {
+                    element = document.getElementById("content");
+                    check = document.getElementById("check");
+                    if (check.checked) {
+                        element.style.display='block';
+                    }
+                    else {
+                        element.style.display='none';
+                    }
+                }
+        </script>
+
+    </body>
+</html>

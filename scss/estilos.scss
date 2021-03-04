@@ -1,0 +1,676 @@
+/* IMPORTS */
+
+@import "tipografia.scss";
+@import "estilosTextos.scss";
+
+/*VARIABLES*/
+
+$color-rosa-principal: #f8d7c8;
+$color-rosa-oscuro: #dfc1c1;
+$color-gris: #2d2d2d;
+
+//Mixins//
+
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//Maps//
+
+$botones: (
+    "envio": $color-rosa-oscuro,
+    "cancelar": red,
+);
+
+@each $boton, $color in $botones {
+    .boton-#{$boton} {
+        background-color: $color;
+    }
+}
+
+/* PROPIEDADES POR ETIQUETAS*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: mons;
+    font-size: 16px;
+    line-height: 18px;
+    background-color: $color-rosa-principal;
+    background-attachment: fixed;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+
+    color: black;
+    background: rgb(248, 217, 203);
+    background: linear-gradient(180deg, rgba(248, 217, 203, 1) 9%, rgba(223, 193, 193, 1) 76%);
+
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+textarea,
+input,
+select {
+    font-family: mons;
+    font-size: 16px;
+    background-color: #dccac2;
+}
+
+// h1 {
+//     font-size: 30px;
+//     font-family: alma, serif;
+//     width: 195px;
+//     margin: auto;
+//     text-align: center;
+//     text-transform: capitalize;
+//     letter-spacing: 5px;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Mons;
+    font-size: 30px;
+    font-weight: bolder;
+
+    line-height: 40px;
+    text-transform: capitalize;
+
+    letter-spacing: 0.4ex;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+}
+
+nav {
+    background: linear-gradient(180deg, rgba(223, 193, 193, 1) 20%, rgba(248, 217, 203, 1) 77%);
+    width: 100%;
+    height: 75px;
+    margin-bottom: 50px;
+    border-bottom: 0.5px black;
+    z-index: 1;
+    box-shadow: 0px 6px 5px 3px rgba(0, 0, 0, 0.3);
+
+    animation-name: efecto_nav;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+/* CLASES */
+
+.fondos-index {
+    // background-image: url(../images/portadarogelcomp.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 75px;
+}
+
+.fondos-index__1 {
+    background-image: url(../images/portadarogelcomp.jpg);
+}
+
+.fondos-index__2 {
+    background-image: url(../images/fotos/tarta1.JPG);
+}
+
+.fondos-index__3 {
+    background-image: url(../images/fotos/marquise.JPG);
+}
+
+@keyframes efecto_nav {
+    0% {
+        opacity: 0%;
+    }
+    /* 25% {
+        opacity: 25%;
+    } */
+    50% {
+        opacity: 50%;
+    }
+    /* 75% {
+        opacity: 75%;
+    } */
+    100% {
+        opacity: 100%;
+    }
+}
+
+.fixedNav {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+
+    border-bottom: 0.5px black;
+    z-index: 100;
+    box-shadow: 0px 6px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ulNav {
+    display: flex;
+    height: 75px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+        width: 20%;
+        text-align: center;
+        list-style: none;
+        font-family: mons;
+        font-size: 20px;
+        color: black;
+    }
+
+    a {
+        padding-left: 3px;
+        text-decoration: none;
+        color: $color-gris;
+        text-align: center;
+    }
+
+    a:hover {
+        font-weight: 900;
+        background-color: $color-gris;
+        transition: 0.5s;
+        color: $color-rosa-principal;
+    }
+}
+
+.boton-menu {
+    background-color: none;
+}
+
+.dropdown {
+    padding-top: 25px;
+    padding-left: 30px;
+}
+
+.dropdown-item {
+    background-color: $color-rosa-principal;
+    margin: 0;
+    padding: 1em;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+footer {
+    p {
+        font-family: mons;
+        text-transform: lowercase;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+/* BODY IMAGENES */
+
+.logo {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    border: solid $color-rosa-principal;
+}
+
+.imagenportada {
+    width: 100%;
+    display: block;
+    margin: 0px;
+    padding-top: 0px;
+    position: absolute;
+}
+
+.box-derecha {
+    width: 80%;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-gris;
+    color: $color-rosa-principal;
+
+    border-radius: 10%;
+}
+
+.box-izquierda {
+    width: 80%;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: $color-gris;
+
+    border-radius: 10%;
+}
+
+.box-derecha__imagen {
+    width: 50%;
+    img {
+        width: 80%;
+        border-radius: 10%;
+        margin: 10%;
+    }
+}
+
+.box-derecha__texto {
+    width: 50%;
+    padding: 30px;
+    line-height: 25px;
+    font-size: 20px;
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.box-izquierda__imagen {
+    width: 50%;
+    img {
+        width: 80%;
+        border-radius: 10%;
+        margin: 10%;
+    }
+}
+
+.box-izquierda__texto {
+    width: 50%;
+    padding: 30px;
+    line-height: 25px;
+    font-size: 20px;
+    margin: 0px 15px;
+    text-align: center;
+}
+
+//MOBILE//
+
+.box-mobile {
+    width: 80%;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-gris;
+    color: $color-rosa-principal;
+
+    border-radius: 10%;
+}
+
+.box-mobile__imagen {
+    width: 100%;
+    img {
+        width: 100%;
+        border-radius: 10%;
+        margin-bottom: 10%;
+    }
+}
+
+.box-mobile__texto {
+    width: 100%;
+    padding: 20px 0px;
+    line-height: 25px;
+    font-size: 16px;
+    margin: 0px 15px;
+    text-align: center;
+}
+
+//CARTAS//
+
+.carta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // img:hover {
+    //     transition: all 1s;
+    //     transform: scale(1.5);
+    // }
+}
+
+.carta__imagenes {
+    margin: 20px;
+    border-radius: 5%;
+    border-style: solid;
+    height: auto;
+    width: 50%;
+}
+
+#GoogleMaps {
+    background-color: $color-gris;
+    border-radius: 10%;
+    color: $color-rosa-principal;
+    padding: 20px;
+}
+
+#iframeGoogleMaps {
+    display: block;
+    margin: auto;
+    @include sizes(80%, 500px);
+
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.logoWsp {
+    @include sizes(2em, auto);
+
+    position: fixed;
+    left: 90%;
+    bottom: 10%;
+
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    z-index: 2;
+}
+
+.logoInstFace {
+    @include sizes(40px, auto);
+    display: block;
+    margin: 10px;
+    background: none;
+}
+
+#Redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/*      CATALOGO GRID             */
+
+.grid {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+#catalogoGrid {
+    display: grid;
+
+    padding: 10px;
+    width: 80%;
+    height: 100%;
+
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 75% 25%;
+
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    justify-content: center;
+    align-content: center;
+
+    grid-template-areas:
+        "nav foto foto foto"
+        "nav foto1 foto2 foto3";
+}
+
+#navCatalogo {
+    grid-area: nav;
+}
+
+#navCatalogo ol {
+    text-transform: uppercase;
+    list-style-type: none;
+    font-weight: bolder;
+}
+
+#navCatalogo ol ul {
+    line-height: 16px;
+    font-weight: normal;
+    list-style-type: none;
+    text-transform: none;
+    padding-left: 60px;
+}
+
+#fotoPrincipal {
+    grid-area: foto;
+    background-image: url(../images/fotos/tarta1.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+#foto1 {
+    grid-area: foto1;
+    background-image: url(../images/fotos/coco.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+#foto2 {
+    grid: foto2;
+    background-image: url(../images/fotos/tarta2.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+#foto3 {
+    grid-area: foto3;
+    background-image: url(../images/fotos/torta1.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+.centradoDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* MEDIAS QUERIES */
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #tablaInfoMobile {
+        display: none;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #navMobile {
+        display: none;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #bodyMobile {
+        display: none;
+    }
+}
+
+/* MEDIA QUERIES MAX */
+
+@media (max-width: 1199px) {
+    #bodyDesktop {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+    #navDesktop {
+        display: none;
+    }
+    #navMobile {
+        p {
+            position: absolute;
+            top: 30px;
+            left: 70%;
+            text-align: center;
+            font-family: alma;
+            font-size: 14px;
+        }
+    }
+
+    #bodyIndex {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    #tablaInfoDesktop {
+        display: none;
+    }
+}
+
+.logoMediaQueries {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    border: solid $color-rosa-principal;
+}
+
+// NUESTRA HISTORIA //
+
+.imagenNuestraHistoria {
+    width: 100%;
+    height: auto;
+}
+
+.textoNuestraHistoria {
+    p {
+        font-size: 16px;
+        padding: 5px;
+        line-height: 18px;
+    }
+}
+
+.footerNuestraHistoria {
+    @extend footer;
+    margin-top: 40px;
+}
+
+// INFORMACION //
+
+#informacionUtil {
+    p {
+        font-size: 18px;
+        line-height: 20px;
+        padding: 5px 0px;
+    }
+}
+
+.fondoRosaOscuro {
+    background-color: $color-rosa-oscuro;
+}
+
+.centerBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartaInfo {
+    width: 80%;
+    background-color: $color-rosa-oscuro;
+    margin: 10px 0px;
+    text-align: center;
+    border-radius: 5%;
+
+    .cartaInfo__titulo {
+        @extend .negrita;
+        padding: 10px 0px;
+    }
+
+    .cartaInfo__pregunta {
+        background-color: whitesmoke;
+    }
+
+    .cartaInfo__respuesta {
+        padding: 10px 0px;
+    }
+}
+
+//MAPS//
+
+// NO UTILIZABLES
+.credit-card-div span {
+    padding-top: 10px;
+}
+.credit-card-div img {
+    padding-top: 30px;
+}
+.credit-card-div .small-font {
+    font-size: 9px;
+}
+
+.credit-card-div .pad-adjust {
+    padding-top: 10px;
+}
+
+.slogan {
+    font-family: Alma;
+    font-size: 20px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    letter-spacing: 0.5px;
+    word-spacing: normal;
+
+    margin-top: 10px;
+
+    position: absolute;
+    z-index: 1;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    animation-name: efecto_nav;
+    animation-duration: 3s;
+}

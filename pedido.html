@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device=width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="pedido, pedido de tortas, pagar, "
+        />
+        <meta
+            name="description"
+            content="En Francina Pasteleria podes hacer tu pedido de manera online."
+        />
+        <title>Hace tu pedido! Francina Pasteleria</title>
+
+        <link rel="stylesheet" href="css/animate.css" />
+        <link rel="stylesheet" href="CSS/bootstrap.css" />
+
+        <link rel="stylesheet" href="CSS/estilosSass.css" />
+        <script
+            src="https://kit.fontawesome.com/0fe480d2f7.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <body>
+        <header>
+
+        <nav id="navMobile" >
+
+            <a href="index.html">
+                <img  class="logoMediaQueries" src="images/logo/LOGO IMPRENTA-03.png" alt="logo Francinapasteleria">     
+            </a>
+      
+            <div class="dropdown">
+                <a class="btn dropdown-toggle boton-menu negrita" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="index.html">⚫ Inicio</a>
+                    <a class="dropdown-item" href="catalogo.html">⚫ Catalogo</a>
+                    <a class="dropdown-item negrita " href="pedido.html">⚫ Hacenos tu pedido!</a>
+                    <a class="dropdown-item" href="historia.html">⚫ Nuestra Historia</a>
+                    <a class="dropdown-item" href="informacion.html">⚫ Informacion</a>
+                </div>    
+            </div>
+
+            <p>Amor a primera mordida</p>          
+
+        </nav>
+
+        <nav id="navDesktop">
+
+            <ul class="ulNav">
+                <li><a href="catalogo.html"> Catologo </a></li>
+                <li><a class="negrita" href="pedido.html">Hace tu pedido</a></li>
+            
+                <li>
+                    <a style="background: none" href="index.html"
+                        ><img class="logo" src="images/logo/LOGO IMPRENTA-03.png"
+                    /></a>
+                </li>
+            
+                <li><a href="historia.html">Nuestra Historia</a></li>
+                <li><a href="informacion.html">Informacion </a></li>
+            </ul>
+        </nav>
+
+        
+        </header>
+
+
+
+        <main>
+            <h2>Hacenos tu pedido!</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-10 col-lg-8">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <!-- <legend class="text-center header">Contact us</legend> -->
+                                
+                                <div class="form-group">
+
+                                    <div class="col-12">
+                                        <i class="fa fa-user bigicon"></i><input
+                                            id="fname"
+                                            name="name"
+                                            type="text"
+                                            placeholder="Nombre"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+    
+                                    <div class="col-12">
+                                        <i class="fa fa-user bigicon"></i
+                                    ><input
+                                            id="lname"
+                                            name="name"
+                                            type="text"
+                                            placeholder="Apellido"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <div class="col-12">
+                                        <i class="fa fa-envelope-o bigicon"></i
+                                    ><input
+                                            id="email"
+                                            name="email"
+                                            type="text"
+                                            placeholder="Email"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <div class="col-12">
+                                       <i class="fa fa-phone-square bigicon"></i
+                                    > <input
+                                            id="phone"
+                                            name="phone"
+                                            type="text"
+                                            placeholder="Telefono Celular"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                
+                                    <div class="form-group form-check" style="margin: 0; ">
+                                        <i class="fas fa-location-arrow"></i><label class="form-check-label" style="padding-left: 0.5em;" for="check">Necesitas Envio ?</label>                                    
+                                        <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" /> 
+                                    </div>
+                                </div>
+
+    
+                                <div id="content" style="display: none;">
+                                    <div class="col-12">
+                                        <input
+                                            id="adress"
+                                            name="adress"
+                                            type="text"
+                                            placeholder="Direccion de Envio"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                  </div>
+
+                            <!-- <div class="form-group">
+
+                                <div class="col-12">
+                                    <input
+                                        id="adress"
+                                        name="adress"
+                                        type="text"
+                                        placeholder="Direccion de Envio"
+                                        class="form-control"
+                                    />
+                                </div>
+                            </div> -->
+
+                            <div style="display: flex; flex-direction: column;  align-items: center;">
+                                <p class="negrita subrayado" style="margin-top: 10px;">Seleccione su producto</p>
+                                <div class="form-group col-12">
+                                    <i class="fas fa-crown"></i>
+                                    <select class="form-control col-12"  >
+                                        
+                                         <p>Seleccione su producto</p>
+                                        <option  >Las Reinas de Francina</option>
+                                        <option>Marquise Clasica</option>
+                                        <option>Marquise Oreo</option>
+                                        <option>Marquise Golosinas</option>
+                                        <option>Marquise Frutos Rojos</option>
+                                        <option>Pavlova</option>
+                                        <option>Ricota y frutos Rojos</option>
+                                        <option>Tropical</option>
+                                    
+                                    </select>
+                                    
+                                    <div class="col-sm-4 align-self-start" style="padding: 0;" >
+                                        <select class="form-control"  >
+                                            <option>Cantidad</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="centradoDiv"><i class="fas fa-plus-square "></i> </div> 
+
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <i class="fas fa-birthday-cake"></i>
+                                    <select class="form-control col-12"  >
+                    
+                                    <option>Las clasicas de siempre</option>
+                                    <option>Ricota y Naranja</option>
+                                    <option>Rogel</option>
+                                    <option>Cheescake</option>
+                                    <option>Tiramisu</option>
+                                    <option>Lemon Pie</option>
+                    
+                                </select>
+
+                                    
+                                <div class="col-sm-4 align-self-start" style="padding: 0;" >
+                                    <select class="form-control"  >
+                                        <option>Cantidad</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+
+                                    </select>
+                                   </div>
+                                   <div class="centradoDiv"><i class="fas fa-plus-square "></i> </div> 
+                                </div>
+                               
+                                <div class="form-group col-12">
+                                    <i class="fas fa-hippo"></i>
+                                    <select class="form-control col-12"  >
+                                    <option>Para matar la gula</option>
+                                    <option>Chocotorta</option>
+                                    <option>ChocoOreo</option>
+                                    <option>Oreo Simple</option>
+                                    <option>Oreo Doble</option>
+                    
+                                </select>
+                    
+                                    
+                                <div class="col-sm-4 align-self-start" style="padding: 0;" >
+                                    <select class="form-control"  >
+                                        <option>Cantidad</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+
+                                    </select>
+                                   </div>
+                                   <div class="centradoDiv"><i class="fas fa-plus-square "></i> </div> 
+                                </div>
+                    
+                    
+                    
+                                <div class="form-group col-12">
+                                    <img  src="https://img.icons8.com/ios-filled/50/000000/mate.png" style="width: 20px; height: 20px;" />
+                                    <select class="form-control col-12"  >
+                    
+                                    <option>El mate es una excelente excusa</option>
+                                    <option>Coco</option>
+                                    <option>Cabsha</option>
+                                    <option>Apple Crumble</option>
+                                    <option>Peras y Nueces</option>
+                                    <option>Pastafrola</option>
+                    
+                                </select>
+                    
+                                    
+                                <div class="col-sm-4 align-self-start" style="padding: 0;" >
+                                    <select class="form-control"  >
+                                        <option>Cantidad</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+
+                                    </select>
+                                   </div>
+                                   <div class="centradoDiv"><i class="fas fa-plus-square "></i> </div> 
+                                </div>
+                    
+                    
+                                <div class="form-group col-12">
+                                    <i class="fas fa-candy-cane"></i>
+                                    <select class="form-control col-12"  >
+                    
+                                    <option>Bocaditos que enamoran</option>
+                                    <option>Mini Lemon Pie</option>
+                                    <option>Mini Cabsha</option>
+                                    <option>Cuadraditos de Coco</option>
+                                    <option>Cuadraditos de Ricota y Frutos rojos</option>
+                                    <option>Cuadraditos de Aplle Crumble</option>
+                                    <option>Cuadraditos de Marquise</option>
+                                    <option>Cabsha Browmnie</option>
+                                    <option>Mix de Alfajores</option>
+                                    <option>Pavlovitas</option>
+                                    <option>Pinitos de Oreo</option>
+                                    <option>Brownies</option>
+                                    <option>Blondies</option>
+                                    <option>Bombones</option>
+                                    <option>Shots</option>
+                    
+                    
+                                </select>
+                    
+                                    
+                                <div class="col-sm-4 align-self-start" style="padding: 0;" >
+                                    <select class="form-control"  >
+                                            <option>Cantidad</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+
+                                        </select>
+                                       </div>
+                                       <div class="centradoDiv"><i class="fas fa-plus-square "></i> </div> 
+                    
+                                </div>
+
+                            </div>
+
+
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"
+                                        ><i class="fa fa-pencil-square-o bigicon"></i
+                                    ></span>
+                                    <div class="col-12">
+                                        <textarea
+                                            class="form-control"
+                                            id="message"
+                                            name="message"
+                                            placeholder="Ingrese aqui comentarios o pedidos especiales"
+                                            rows="7"
+                                        ></textarea>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="form-group">
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-lg boton-envio negrita">
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+
+        <!-- FUTUROS MEDIOS DE PAGO-->
+
+        <!-- <div class="container">
+            <form action="#" class="credit-card-div">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Numero de Tarjeta de Credito"
+                                />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">
+                                    Fecha de expedicion</span
+                                >
+                                <input type="text" class="form-control" placeholder="MM" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">
+                                    Año de Vencimiento</span
+                                >
+                                <input type="text" class="form-control" placeholder="YY" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font"> CCV</span>
+                                <input type="text" class="form-control" placeholder="CCV" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pad-adjust">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Nombre que figura en la Tarjeta"
+                                />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pad-adjust">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked class="text-muted" /> Guardar
+                                        datos para proxima compra
+
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-6 pad-adjust">
+                                <input type="submit" class="btn btn-danger" value="CANCELAR" />
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-6 pad-adjust">
+                                <input
+                                    type="submit"
+                                    class="btn btn-warning btn-block"
+                                    value="PAGAR"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div> -->
+
+        <footer class="wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.5s">
+            <h2>Nuestras Redes</h2>
+
+            <div id="Redes">
+                <a href="https://www.instagram.com/francinapasteleria/?hl=es-la" target="_blank"
+                    ><img
+                        class="logoInstFace"
+                        src="images/logo/instagram.png"
+                        alt="Logo Instagram"
+                    />
+                </a>
+                <a href="https://www.facebook.com/Francinapasteleria" target="_blank"
+                    ><img class="logoInstFace" src="images/logo/facebook.png" alt="Logo facebook" />
+                </a>
+            </div>
+            <p>Sitio Web creado por Francisco Lagorio ®</p>
+        </footer>
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+    >
+    </script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+    >
+    </script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"
+    >
+    </script>
+    <script src="js/wow.min.js">
+    </script>
+    <script src="js/main.js">
+    </script>
+            <script type="text/javascript">
+                function showContent() {
+                    element = document.getElementById("content");
+                    check = document.getElementById("check");
+                    if (check.checked) {
+                        element.style.display='block';
+                    }
+                    else {
+                        element.style.display='none';
+                    }
+                }
+            </script>
+
+    </body>
+
+</html>
