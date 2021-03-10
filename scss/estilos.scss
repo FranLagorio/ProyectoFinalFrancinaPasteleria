@@ -16,6 +16,21 @@ $color-gris: #2d2d2d;
     height: $height;
 }
 
+.bigicon,
+.fa-location-arrow,
+.fa-crown,
+.fa-plus-square,
+.fa-birthday-cake,
+.fa-hippo,
+.fa-candy-cane {
+    color: #af9898;
+    padding-bottom: 5px;
+}
+
+.colorRosaOscuro {
+    color: #5f4e4e;
+}
+
 //Maps//
 
 $botones: (
@@ -49,17 +64,6 @@ body {
     flex-direction: column;
 }
 
-footer {
-    width: 100%;
-
-    color: black;
-    background: rgb(248, 217, 203);
-    background: linear-gradient(180deg, rgba(248, 217, 203, 1) 9%, rgba(223, 193, 193, 1) 76%);
-
-    margin-top: 20px;
-    padding-bottom: 10px;
-}
-
 textarea,
 input,
 select {
@@ -67,16 +71,6 @@ select {
     font-size: 16px;
     background-color: #dccac2;
 }
-
-// h1 {
-//     font-size: 30px;
-//     font-family: alma, serif;
-//     width: 195px;
-//     margin: auto;
-//     text-align: center;
-//     text-transform: capitalize;
-//     letter-spacing: 5px;
-// }
 
 h1,
 h2,
@@ -99,7 +93,7 @@ h6 {
 }
 
 nav {
-    background: linear-gradient(180deg, rgba(223, 193, 193, 1) 20%, rgba(248, 217, 203, 1) 77%);
+    background: linear-gradient(180deg, rgba(223, 193, 193, 1) 5%, rgba(248, 217, 203, 1) 10%);
     width: 100%;
     height: 75px;
     margin-bottom: 50px;
@@ -110,6 +104,76 @@ nav {
     animation-name: efecto_nav;
     animation-duration: 1s;
     animation-timing-function: linear;
+}
+
+footer {
+    width: 100%;
+
+    color: #645555;
+    background: rgb(248, 217, 203);
+    background: linear-gradient(180deg, rgba(248, 217, 203, 1) 5%, rgb(214, 186, 186) 70%);
+
+    margin-top: 70px;
+    padding-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-family: mons;
+
+        text-align: left;
+        font-size: 14px;
+    }
+
+    i {
+        padding: 0 10px;
+    }
+
+    .fa-mobile {
+        padding-left: 13px;
+    }
+
+    #copyright {
+        text-align: center;
+        text-transform: capitalize;
+        padding-top: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #645555;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    .flexRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .col-4 {
+            padding-bottom: 30px;
+        }
+    }
+
+    .flexRowIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        i {
+            padding: 0px 10px;
+        }
+    }
+
+    .flexColumn {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* CLASES */
@@ -201,7 +265,7 @@ nav {
 }
 
 .dropdown {
-    padding-top: 25px;
+    padding-top: 18.5px;
     padding-left: 30px;
 }
 
@@ -209,20 +273,12 @@ nav {
     background-color: $color-rosa-principal;
     margin: 0;
     padding: 1em;
+    border-radius: 100%;
 }
 
 .dropdown-menu {
     padding: 0;
-}
-
-footer {
-    p {
-        font-family: mons;
-        text-transform: lowercase;
-        text-transform: capitalize;
-        text-align: center;
-        font-size: 14px;
-    }
+    background-color: $color-rosa-principal;
 }
 
 /* BODY IMAGENES */
@@ -362,7 +418,7 @@ footer {
     border-radius: 5%;
     border-style: solid;
     height: auto;
-    width: 50%;
+    width: 40%;
 }
 
 #GoogleMaps {
@@ -385,8 +441,8 @@ footer {
     @include sizes(2em, auto);
 
     position: fixed;
-    left: 90%;
-    bottom: 10%;
+    left: 92%;
+    bottom: 15%;
 
     animation-duration: 3s;
     animation-timing-function: linear;
@@ -531,6 +587,24 @@ footer {
 }
 
 @media (max-width: 991px) {
+    footer {
+        .col-4 {
+            max-width: 100%;
+        }
+
+        .flexRow {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .flexRowIcons {
+            justify-content: center;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -540,11 +614,13 @@ footer {
     #navMobile {
         p {
             position: absolute;
-            top: 30px;
-            left: 70%;
+            top: 18.5px;
+            left: 68%;
             text-align: center;
-            font-family: alma;
-            font-size: 14px;
+            font-family: mons;
+            font-size: 12px;
+            line-height: 38px;
+            letter-spacing: 0;
         }
     }
 
@@ -555,6 +631,9 @@ footer {
 
 @media (max-width: 575px) {
     #tablaInfoDesktop {
+        display: none;
+    }
+    #slogan {
         display: none;
     }
 }

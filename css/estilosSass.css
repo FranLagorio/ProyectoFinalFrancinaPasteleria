@@ -38,7 +38,26 @@
 .letraMobile {
   font-size: 14px; }
 
+.alineadoIzquierda {
+  text-align: start; }
+
+.text20px {
+  font-size: 20px; }
+
 /*VARIABLES*/
+.bigicon,
+.fa-location-arrow,
+.fa-crown,
+.fa-plus-square,
+.fa-birthday-cake,
+.fa-hippo,
+.fa-candy-cane {
+  color: #af9898;
+  padding-bottom: 5px; }
+
+.colorRosaOscuro {
+  color: #5f4e4e; }
+
 .boton-envio {
   background-color: #dfc1c1; }
 
@@ -60,14 +79,6 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column; }
-
-footer, .footerNuestraHistoria {
-  width: 100%;
-  color: black;
-  background: #f8d9cb;
-  background: linear-gradient(180deg, #f8d9cb 9%, #dfc1c1 76%);
-  margin-top: 20px;
-  padding-bottom: 10px; }
 
 textarea,
 input,
@@ -92,7 +103,7 @@ h6 {
   padding-bottom: 20px; }
 
 nav {
-  background: linear-gradient(180deg, #dfc1c1 20%, #f8d9cb 77%);
+  background: linear-gradient(180deg, #dfc1c1 5%, #f8d9cb 10%);
   width: 100%;
   height: 75px;
   margin-bottom: 50px;
@@ -102,6 +113,49 @@ nav {
   animation-name: efecto_nav;
   animation-duration: 1s;
   animation-timing-function: linear; }
+
+footer, .footerNuestraHistoria {
+  width: 100%;
+  color: #645555;
+  background: #f8d9cb;
+  background: linear-gradient(180deg, #f8d9cb 5%, #d6baba 70%);
+  margin-top: 70px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  footer p, .footerNuestraHistoria p {
+    font-family: mons;
+    text-align: left;
+    font-size: 14px; }
+  footer i, .footerNuestraHistoria i {
+    padding: 0 10px; }
+  footer .fa-mobile, .footerNuestraHistoria .fa-mobile {
+    padding-left: 13px; }
+  footer #copyright, .footerNuestraHistoria #copyright {
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 30px; }
+  footer a, .footerNuestraHistoria a {
+    text-decoration: none;
+    color: #645555; }
+  footer a:hover, .footerNuestraHistoria a:hover {
+    color: black; }
+  footer .flexRow, .footerNuestraHistoria .flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    footer .flexRow .col-4, .footerNuestraHistoria .flexRow .col-4 {
+      padding-bottom: 30px; }
+  footer .flexRowIcons, .footerNuestraHistoria .flexRowIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    footer .flexRowIcons i, .footerNuestraHistoria .flexRowIcons i {
+      padding: 0px 10px; }
+  footer .flexColumn, .footerNuestraHistoria .flexColumn {
+    display: flex;
+    flex-direction: column; }
 
 /* CLASES */
 .fondos-index {
@@ -172,23 +226,18 @@ nav {
   background-color: none; }
 
 .dropdown {
-  padding-top: 25px;
+  padding-top: 18.5px;
   padding-left: 30px; }
 
 .dropdown-item {
   background-color: #f8d7c8;
   margin: 0;
-  padding: 1em; }
+  padding: 1em;
+  border-radius: 100%; }
 
 .dropdown-menu {
-  padding: 0; }
-
-footer p, .footerNuestraHistoria p {
-  font-family: mons;
-  text-transform: lowercase;
-  text-transform: capitalize;
-  text-align: center;
-  font-size: 14px; }
+  padding: 0;
+  background-color: #f8d7c8; }
 
 /* BODY IMAGENES */
 .logo {
@@ -293,7 +342,7 @@ footer p, .footerNuestraHistoria p {
   border-radius: 5%;
   border-style: solid;
   height: auto;
-  width: 50%; }
+  width: 40%; }
 
 #GoogleMaps {
   background-color: #2d2d2d;
@@ -313,8 +362,8 @@ footer p, .footerNuestraHistoria p {
   width: 2em;
   height: auto;
   position: fixed;
-  left: 90%;
-  bottom: 10%;
+  left: 92%;
+  bottom: 15%;
   animation-duration: 3s;
   animation-timing-function: linear;
   z-index: 2; }
@@ -417,21 +466,36 @@ footer p, .footerNuestraHistoria p {
   #bodyDesktop {
     display: none; } }
 
+@media (max-width: 991px) {
+  footer .col-4, .footerNuestraHistoria .col-4 {
+    max-width: 100%; }
+  footer .flexRow, .footerNuestraHistoria .flexRow {
+    flex-direction: column;
+    align-items: center; }
+  footer p, .footerNuestraHistoria p {
+    text-align: center; }
+  footer .flexRowIcons, .footerNuestraHistoria .flexRowIcons {
+    justify-content: center; } }
+
 @media (max-width: 767px) {
   #navDesktop {
     display: none; }
   #navMobile p {
     position: absolute;
-    top: 30px;
-    left: 70%;
+    top: 18.5px;
+    left: 68%;
     text-align: center;
-    font-family: alma;
-    font-size: 14px; }
+    font-family: mons;
+    font-size: 12px;
+    line-height: 38px;
+    letter-spacing: 0; }
   #bodyIndex {
     font-size: 14px; } }
 
 @media (max-width: 575px) {
   #tablaInfoDesktop {
+    display: none; }
+  #slogan {
     display: none; } }
 
 .logoMediaQueries {
