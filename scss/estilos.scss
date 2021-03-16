@@ -1,7 +1,7 @@
 /* IMPORTS */
 
-@import "tipografia.scss";
-@import "estilosTextos.scss";
+@import "_tipografia.scss";
+@import "_estilosTextos.scss";
 
 /*VARIABLES*/
 
@@ -270,13 +270,11 @@ footer {
 }
 
 .dropdown-menu {
-    background: rgb(248,215,200);
-    background: linear-gradient(153deg, rgba(248,215,200,1) 30%, rgba(223,193,193,1) 83%);
-
+    background: rgb(248, 215, 200);
+    background: linear-gradient(153deg, rgba(248, 215, 200, 1) 30%, rgba(223, 193, 193, 1) 83%);
 
     margin: 0;
     padding: 0;
-
 }
 
 .dropdown-item {
@@ -299,8 +297,6 @@ footer {
         padding-right: 10px;
     }
 }
-
-
 
 /* BODY IMAGENES */
 
@@ -334,7 +330,6 @@ footer {
 
     border-radius: 46px 46px 46px 46px;
 }
-
 
 .box-izquierda {
     width: 80%;
@@ -431,7 +426,7 @@ footer {
     @include sizes(2em, auto);
 
     position: fixed;
-    left: 92%;
+    left: 85%;
     bottom: 15%;
 
     animation-duration: 3s;
@@ -563,29 +558,27 @@ footer {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
 }
 
 /* MEDIA QUERIES MAX */
 
 @media (max-width: 1199px) {
-
     .box-mobile {
         width: 768px;
-    
+        height: auto;
         padding-bottom: 30px;
-    
+
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-    
+
         background-color: $color-gris;
         color: $color-rosa-principal;
-    
+
         border-radius: 10%;
     }
-    
+
     .box-mobile__imagen {
         width: 100%;
         display: flex;
@@ -593,12 +586,11 @@ footer {
         img {
             width: 90%;
             border-radius: 46px 46px 46px 46px;
-            margin-bottom: 10%;  
+            margin-bottom: 10%;
             margin: 0;
         }
-      
     }
-    
+
     .box-mobile__texto {
         width: 100%;
         padding: 20px 0px;
@@ -610,8 +602,6 @@ footer {
 }
 
 @media (max-width: 991px) {
-
-
     footer {
         .col-4 {
             max-width: 100%;
@@ -634,21 +624,20 @@ footer {
 
 @media (max-width: 767px) {
     .box-mobile {
-        width: 100%;
-    
+        width: 90%;
+
         padding-bottom: 30px;
-    
+
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-    
+
         background-color: $color-gris;
         color: $color-rosa-principal;
-    
+
         border-radius: 10%;
     }
-
 
     #navDesktop {
         display: none;
@@ -669,8 +658,6 @@ footer {
     #bodyIndex {
         font-size: 14px;
     }
-
-
 }
 
 @media (max-width: 575px) {
