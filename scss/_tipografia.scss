@@ -8,6 +8,8 @@
     font-family: mons;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
 .letraAlma {
     font-family: Alma;
 }
@@ -16,7 +18,7 @@
     font-family: mons;
 }
 
-.noMarginNoPadding {
-    padding: 0;
-    margin: 0;
+.letraRoboto {
+    font-family: "Roboto";
+    font-weight: 100;
 }

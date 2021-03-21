@@ -1,4 +1,17 @@
-/* IMPORTS */
+// EL ARCHIVO DE ESTILOS SE ENCUENTRA ORDENADO
+// DE LA SIGUIENTE MANERA
+
+// 1 ESTILOS IMPORTADOS
+// 2 VARIABLES
+// 3 PROPIEDADES POR ETIQUETAS
+// 4 PROPIEDADES POR CLASES
+// 5 PROPIEDADES POR CLASES CREADAS SEGUN SECCION
+// 6 MEDIA QUERIES MIN-WIDTH
+// 7 MEDIA QUERIES MAX-WIDTH
+
+// SE UTILIZO CAMELCASE PARA EL NOMBRE DE IDS Y CLASES
+
+// IMPORTS
 
 @import "_tipografia.scss";
 @import "_estilosTextos.scss";
@@ -9,46 +22,15 @@ $color-rosa-principal: #f8d7c8;
 $color-rosa-oscuro: #dfc1c1;
 $color-gris: #2d2d2d;
 
-//Mixins//
-
-@mixin sizes($width, $height) {
-    width: $width;
-    height: $height;
-}
-
-.bigicon,
-.fa-location-arrow,
-.fa-crown,
-.fa-plus-square,
-.fa-birthday-cake,
-.fa-hippo,
-.fa-candy-cane {
-    color: #af9898;
-    padding-bottom: 5px;
-}
-
-.colorRosaOscuro {
-    color: #5f4e4e;
-}
-
-//Maps//
-
-$botones: (
-    "envio": $color-rosa-oscuro,
-    "cancelar": red,
-);
-
-@each $boton, $color in $botones {
-    .boton-#{$boton} {
-        background-color: $color;
-    }
-}
-
 /* PROPIEDADES POR ETIQUETAS*/
 
 * {
-    margin: 0;
+    margin: 0px;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -57,6 +39,7 @@ body {
     line-height: 18px;
     background-color: $color-rosa-principal;
     background-attachment: fixed;
+
     overflow: scroll;
     overflow-x: hidden;
 
@@ -90,13 +73,16 @@ h6 {
     text-align: center;
 
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 nav {
-    background: linear-gradient(180deg, rgba(223, 193, 193, 1) 5%, rgba(248, 217, 203, 1) 10%);
     width: 100%;
     height: 75px;
+
+    background: linear-gradient(180deg, rgba(223, 193, 193, 1) 5%, rgba(248, 217, 203, 1) 10%);
     margin-bottom: 50px;
+
     border-bottom: 0.5px black;
     z-index: 1;
     box-shadow: 0px 6px 5px 3px rgba(0, 0, 0, 0.3);
@@ -116,38 +102,14 @@ footer {
     margin-top: 70px;
     padding-bottom: 1px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     p {
-        font-family: mons;
-
-        text-align: left;
         font-size: 14px;
+        font-family: mons;
+        text-align: left;
     }
 
     i {
         padding: 0 10px;
-    }
-
-    .fa-mobile {
-        padding-left: 13px;
-    }
-
-    #copyright {
-        text-align: center;
-        text-transform: capitalize;
-        padding-top: 30px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #645555;
-    }
-
-    a:hover {
-        color: black;
     }
 
     .flexRow {
@@ -170,54 +132,98 @@ footer {
         }
     }
 
-    .flexColumn {
-        display: flex;
-        flex-direction: column;
+    #copyright {
+        font-size: 14px;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: $color-gris;
+        padding-top: 50px;
     }
-}
 
-/* CLASES */
+    .fa-mobile {
+        padding-left: 13px;
+    }
 
-.fondos-index {
-    // background-image: url(../images/portadarogelcomp.jpg);
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-top: 75px;
-}
+    a {
+        text-decoration: none;
+        color: #645555;
+    }
 
-.fondos-index__1 {
-    background-image: url(../images/portadarogelcomp.jpg);
-}
-
-.fondos-index__2 {
-    background-image: url(../images/fotos/tarta1.JPG);
-}
-
-.fondos-index__3 {
-    background-image: url(../images/fotos/marquise.JPG);
+    a:hover {
+        color: black;
+    }
 }
 
 @keyframes efecto_nav {
     0% {
         opacity: 0%;
     }
-    /* 25% {
-        opacity: 25%;
-    } */
+
     50% {
         opacity: 50%;
     }
-    /* 75% {
-        opacity: 75%;
-    } */
+
     100% {
         opacity: 100%;
     }
 }
+
+// CLASES
+
+.colorRosaOscuro {
+    color: #5f4e4e;
+}
+
+.colorRosa {
+    color: $color-rosa-principal;
+}
+
+.colorRosaMasOscuro {
+    color: #9b8585;
+}
+
+.fondoRosaOscuro {
+    background-color: $color-rosa-oscuro;
+}
+
+.fondoGris {
+    background-color: $color-gris;
+}
+
+.fondos-index {
+    height: 95vh;
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    margin-top: 75px;
+}
+
+.fondos-index__1 {
+    background-image: url(../images/fotos/Index/Portada1marquise.JPG);
+}
+
+.fondos-index__2 {
+    background-image: url(../images/fotos/Index/MarquiseOreo-min.JPG);
+}
+
+.fondos-index__3 {
+    background-image: url(../images/fotos/Index/MarquiseMaracuya.JPG);
+}
+
+.fondos-index__4 {
+    background-image: url(/images/fotos/Index/Tropical.JPG);
+}
+
+.fondos-index__5 {
+    background-image: url(../images/fotos/Index/PortaFrutilla.JPG);
+}
+
+// NAV
 
 .fixedNav {
     width: 100%;
@@ -230,8 +236,9 @@ footer {
 }
 
 .ulNav {
-    display: flex;
     height: 75px;
+
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -250,13 +257,18 @@ footer {
         text-decoration: none;
         color: $color-gris;
         text-align: center;
+        transition: 0.5s;
     }
 
     a:hover {
         font-weight: 900;
+        font-size: 22px;
+
         background-color: $color-gris;
-        transition: 0.5s;
         color: $color-rosa-principal;
+
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
     }
 }
 
@@ -292,13 +304,12 @@ footer {
         height: 24px;
         padding-top: 10px;
     }
+
     i {
         height: 24px;
         padding-right: 10px;
     }
 }
-
-/* BODY IMAGENES */
 
 .logo {
     border-radius: 100%;
@@ -308,12 +319,16 @@ footer {
     border: solid $color-rosa-principal;
 }
 
-.imagenportada {
-    width: 100%;
-    display: block;
-    margin: 0px;
-    padding-top: 0px;
+.logoMediaQueries {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
     position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    border: solid $color-rosa-principal;
 }
 
 .box-derecha {
@@ -345,24 +360,7 @@ footer {
     border-radius: 46px 46px 46px 46px;
 }
 
-.box-derecha__imagen {
-    width: 50%;
-    img {
-        width: 85%;
-        border-radius: 10%;
-        margin: 5%;
-    }
-}
-
-.box-derecha__texto {
-    width: 50%;
-    padding: 30px;
-    line-height: 25px;
-    font-size: 20px;
-    margin: 0px 15px;
-    text-align: center;
-}
-
+.box-derecha__imagen,
 .box-izquierda__imagen {
     width: 50%;
     img {
@@ -372,13 +370,20 @@ footer {
     }
 }
 
+.box-derecha__texto,
 .box-izquierda__texto {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
     width: 50%;
     padding: 30px;
-    line-height: 25px;
-    font-size: 20px;
     margin: 0px 15px;
-    text-align: center;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 //CARTAS//
@@ -388,23 +393,18 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 700px;
+
+    max-width: 600px;
     margin: 0 auto;
-    // img:hover {
-    //     transition: all 1s;
-    //     transform: scale(1.5);
-    // }
 }
 
 .carta__imagenes {
-    // margin: 20px;
     border-radius: 5%;
-    // border-style: solid;
-    // height: auto;
-    // width: 40%;
     margin-bottom: 20px;
     width: 100%;
 }
+
+//GOOGLE MAPS
 
 #GoogleMaps {
     background-color: $color-gris;
@@ -416,127 +416,305 @@ footer {
 #iframeGoogleMaps {
     display: block;
     margin: auto;
-    @include sizes(80%, 500px);
+    width: 80%;
+    height: 500px;
 
     margin-bottom: 30px;
     border-radius: 30px;
 }
 
 .logoWsp {
-    @include sizes(2em, auto);
+    width: 2em;
+    height: auto;
 
     position: fixed;
-    left: 85%;
-    bottom: 15%;
+    left: 90%;
+    bottom: 10%;
 
-    animation-duration: 3s;
     animation-timing-function: linear;
     z-index: 2;
 }
 
-.logoInstFace {
-    @include sizes(40px, auto);
-    display: block;
-    margin: 10px;
-    background: none;
+.slogan {
+    font-family: Alma;
+    font-size: 20px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    letter-spacing: 0.5px;
+    word-spacing: normal;
+
+    margin-top: 10px;
+
+    position: absolute;
+    z-index: 1;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    animation-name: efecto_nav;
+    animation-duration: 3s;
 }
 
-#Redes {
+// SECCION CATALOGO
+
+#flechaCatalogo {
+    z-index: 3;
+    position: fixed;
+    top: 88%;
+    left: 95%;
+
+    padding: 5px;
+    color: $color-gris;
+    background-color: $color-rosa-oscuro;
+    border-radius: 50px 50px 50px 50px;
+    transform: scale(2);
+
+    border: solid 0.5px $color-gris;
+
+    .fa-arrow-up {
+        color: $color-gris;
+    }
+}
+
+#descripcionCatalogo {
+    padding: 0px 20px 20px;
+    height: 80vh;
+    p {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+.indiceCatalogo {
+    background-color: $color-rosa-oscuro;
+    border-radius: 45px 45px 45px 45px;
+
+    padding-top: 10px;
+    list-style: none;
+    width: auto;
+
+    li {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+
+        margin: 20px;
+        padding: 20px;
+
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+    }
+
+    a:hover {
+        font-weight: 900;
+        font-size: 18px;
+
+        padding: 5px;
+
+        color: $color-rosa-principal;
+        background-color: $color-gris;
+        border-radius: 10px 10px 10px 10px;
+
+        transition-timing-function: ease;
+    }
+}
+
+.flexCatalogo,
+.flexCatalogoFinal {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 30px;
+    align-items: center;
+    margin-bottom: 100px;
+
+    background: rgb(248, 215, 200);
+    background: linear-gradient(
+        180deg,
+        rgba(248, 215, 200, 1) 19%,
+        rgba(223, 193, 193, 1) 50%,
+        rgba(248, 215, 200, 1) 79%
+    );
+
+    p {
+        width: auto;
+    }
+
+    .padding {
+        padding: 10px;
+    }
+
+    .bordesRedondeados {
+        border-radius: 10px 10px 10px 10px;
+    }
 }
 
-/*      CATALOGO GRID             */
-
-.grid {
+.boxFlexCatalogo,
+.boxFlexCatalogoTextoAbajo {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenesCatalogo {
+    padding: 10px 0px;
+    border-radius: 45px 45px 45px 45px;
+}
+
+.flexCatalogoFinal {
+    margin-bottom: 40px;
+}
+
+.noMarginNoPadding {
+    padding: 0;
+    margin: 0;
+}
+
+// SECCION HACE TU PEDIDO
+
+.bigicon,
+.fa-location-arrow,
+.fa-crown,
+.fa-plus-square,
+.fa-birthday-cake,
+.fa-hippo,
+.fa-candy-cane {
+    color: #af9898;
+    padding-bottom: 5px;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marginTop {
+    margin-top: 10px;
+}
+
+.logoMate {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+// SECCION NUESTRA HISTORIA
+
+.imagenNuestraHistoria {
     width: 100%;
-    height: 70vh;
-    justify-content: center;
-    align-content: center;
-    overflow: hidden;
-    margin-bottom: 50px;
+    height: auto;
 }
 
-#catalogoGrid {
-    display: grid;
-
-    padding: 10px;
-    width: 80%;
-    height: 100%;
-
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 75% 25%;
-
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-
-    justify-content: center;
-    align-content: center;
-
-    grid-template-areas:
-        "nav foto foto foto"
-        "nav foto1 foto2 foto3";
+.textoNuestraHistoria {
+    p {
+        padding: 5px;
+    }
 }
 
-#navCatalogo {
-    grid-area: nav;
+.footerNuestraHistoria {
+    @extend footer;
+    margin-top: 80px;
 }
 
-#navCatalogo ol {
-    text-transform: uppercase;
-    list-style-type: none;
-    font-weight: bolder;
+// SECCION INFORMACION
+
+//Encabezado de Seccion
+
+.informacionUtil {
+    p {
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+
+        padding: 5px 0px;
+    }
 }
 
-#navCatalogo ol ul {
-    line-height: 16px;
-    font-weight: normal;
-    list-style-type: none;
-    text-transform: none;
-    padding-left: 60px;
-}
-
-#fotoPrincipal {
-    grid-area: foto;
-    background-image: url(../images/fotos/tarta1.JPG);
-    background-size: cover;
-    background-position: center;
-}
-
-#foto1 {
-    grid-area: foto1;
-    background-image: url(../images/fotos/coco.JPG);
-    background-size: cover;
-    background-position: center;
-}
-
-#foto2 {
-    grid: foto2;
-    background-image: url(../images/fotos/tarta2.JPG);
-    background-size: cover;
-    background-position: center;
-}
-
-#foto3 {
-    grid-area: foto3;
-    background-image: url(../images/fotos/torta1.JPG);
-    background-size: cover;
-    background-position: center;
-}
-
-.centradoDiv {
+.centerBlock {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-/* MEDIAS QUERIES */
+//Contenedores de preguntas y respuestas para Mobile
 
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+.contenedorInfo {
+    width: 80%;
+
+    text-align: center;
+
+    margin: 10px 0px;
+    background-color: $color-rosa-oscuro;
+    border-radius: 5%;
+    border: solid 0.5px $color-gris;
+
+    .contenedorInfo__titulo {
+        @extend .negrita;
+
+        font-size: 18px;
+
+        padding: 10px 0px;
+    }
+
+    .contenedorInfo__pregunta {
+        @extend .negrita;
+
+        font-size: 18px;
+
+        background-color: $color-rosa-principal;
+        padding: 10px 0px;
+    }
+
+    .contenedorInfo__respuesta {
+        padding: 10px 0px;
+    }
+}
+
+#tablaInfoDesktop {
+    background: rgb(248, 215, 200);
+    background: linear-gradient(
+        180deg,
+        rgba(248, 215, 200, 1) 0%,
+        rgba(223, 193, 193, 1) 42%,
+        rgba(226, 195, 194, 1) 66%,
+        rgba(248, 215, 200, 1) 100%
+    );
+}
+
+.contenedor__ImgInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .imagenInfo {
+        border-radius: 50px 50px 50px 50px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+//
+//
+//
+//
+//
+
+// MEDIAS QUERIES
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -554,10 +732,32 @@ footer {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    .imagenesCatalogo {
+        width: 790px;
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+    #descripcionCatalogo {
+        p {
+            margin-bottom: 50px;
+        }
+    }
+
+    .boxFlexCatalogo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .boxFlexCatalogoTextoAbajo {
+            width: 31%;
+        }
+
+        .imagenesCatalogo {
+            width: 100%;
+        }
+    }
 }
 
 /* MEDIA QUERIES MAX */
@@ -583,6 +783,7 @@ footer {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
         img {
             width: 90%;
             border-radius: 46px 46px 46px 46px;
@@ -599,9 +800,29 @@ footer {
         margin: 0px 15px;
         text-align: center;
     }
+
+    .ulNav a:hover {
+        font-weight: 900;
+        background-color: $color-gris;
+        transition: 0.5s;
+        color: $color-rosa-principal;
+        padding: 5px;
+        border-radius: 10px 10px 10px 10px;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 991px) {
+    .ulNav {
+        li {
+            font-size: 16px;
+        }
+        a:hover {
+            font-size: 16px;
+            padding: 5px;
+        }
+    }
+
     footer {
         .col-4 {
             max-width: 100%;
@@ -620,9 +841,56 @@ footer {
             justify-content: center;
         }
     }
+
+    #descripcionCatalogo {
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .indiceCatalogo {
+        li {
+            font-size: 14px;
+        }
+
+        a:hover {
+            font-size: 14px;
+        }
+    }
+
+    .imagenesCatalogo {
+        width: 80%;
+    }
+
+    #flechaCatalogo {
+        left: 85%;
+
+        transform: scale(1);
+    }
+
+    .logoWsp {
+        left: 85%;
+    }
 }
 
 @media (max-width: 767px) {
+    #navDesktop {
+        display: none;
+    }
+    #navMobile {
+        p {
+            text-align: center;
+            font-family: mons;
+            font-size: 12px;
+            line-height: 38px;
+            letter-spacing: 0;
+
+            position: absolute;
+            top: 18.5px;
+            left: 68%;
+        }
+    }
+
     .box-mobile {
         width: 90%;
 
@@ -639,24 +907,15 @@ footer {
         border-radius: 10%;
     }
 
-    #navDesktop {
-        display: none;
-    }
-    #navMobile {
-        p {
-            position: absolute;
-            top: 18.5px;
-            left: 68%;
-            text-align: center;
-            font-family: mons;
-            font-size: 12px;
-            line-height: 38px;
-            letter-spacing: 0;
-        }
-    }
+    .indiceCatalogo {
+        a:hover {
+            background: none;
+            color: white;
+            font-size: 14px;
 
-    #bodyIndex {
-        font-size: 14px;
+            padding: 0;
+            margin: 0;
+        }
     }
 }
 
@@ -667,120 +926,42 @@ footer {
     #slogan {
         display: none;
     }
-}
 
-.logoMediaQueries {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 2;
-    border: solid $color-rosa-principal;
-}
-
-// NUESTRA HISTORIA //
-
-.imagenNuestraHistoria {
-    width: 100%;
-    height: auto;
-}
-
-.textoNuestraHistoria {
-    p {
-        font-size: 16px;
-        padding: 5px;
-        line-height: 18px;
-    }
-}
-
-.footerNuestraHistoria {
-    @extend footer;
-    margin-top: 80px;
-}
-
-// INFORMACION //
-
-#informacionUtil {
-    p {
-        font-size: 18px;
-        line-height: 20px;
-        padding: 5px 0px;
-    }
-}
-
-.fondoRosaOscuro {
-    background-color: $color-rosa-oscuro;
-}
-
-.centerBlock {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.cartaInfo {
-    width: 80%;
-    background-color: $color-rosa-oscuro;
-    margin: 10px 0px;
-    text-align: center;
-    border-radius: 5%;
-
-    .cartaInfo__titulo {
-        @extend .negrita;
-        padding: 10px 0px;
+    .descripcionCatalogo {
+        margin-bottom: 10px;
     }
 
-    .cartaInfo__pregunta {
-        background-color: whitesmoke;
+    .indiceCatalogo {
+        li {
+            font-size: 12px;
+            margin: 15px;
+            padding: 5px;
+        }
+
+        a:hover {
+            padding: 0;
+            font-size: 12px;
+
+            background-color: $color-rosa-oscuro;
+            color: black;
+        }
     }
 
-    .cartaInfo__respuesta {
-        padding: 10px 0px;
+    .imagenesCatalogo {
+        width: 90%;
     }
-}
 
-//MAPS//
+    #tituloCatalogo {
+        width: 90%;
+    }
 
-// NO UTILIZABLES
-.credit-card-div span {
-    padding-top: 10px;
-}
-.credit-card-div img {
-    padding-top: 30px;
-}
-.credit-card-div .small-font {
-    font-size: 9px;
-}
+    .fondos-index {
+        margin-top: 30px;
+    }
 
-.credit-card-div .pad-adjust {
-    padding-top: 10px;
-}
-
-.slogan {
-    font-family: Alma;
-    font-size: 20px;
-
-    text-align: center;
-    text-decoration: none;
-    text-transform: capitalize;
-
-    letter-spacing: 0.5px;
-    word-spacing: normal;
-
-    margin-top: 10px;
-
-    position: absolute;
-    z-index: 1;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-    animation-name: efecto_nav;
-    animation-duration: 3s;
+    .logoMate {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 5px;
+    }
 }
