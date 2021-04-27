@@ -384,7 +384,8 @@ footer, .footerNuestraHistoria {
 
 #descripcionCatalogo {
   padding: 0px 20px 20px;
-  height: 80vh; }
+  height: 80vh;
+  margin-bottom: 80px; }
   #descripcionCatalogo p {
     font-size: 20px;
     line-height: 22px; }
@@ -486,8 +487,8 @@ footer, .footerNuestraHistoria {
   margin-top: 80px; }
 
 .informacionUtil p {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 18px;
   text-align: center;
   padding: 5px 0px; }
 
@@ -509,7 +510,7 @@ footer, .footerNuestraHistoria {
     font-size: 18px;
     padding: 10px 0px; }
   .contenedorInfo .contenedorInfo__pregunta {
-    font-size: 18px;
+    font-size: 16px;
     background-color: #f8d7c8;
     padding: 10px 0px; }
   .contenedorInfo .contenedorInfo__respuesta {
@@ -677,7 +678,9 @@ footer, .footerNuestraHistoria {
   .logoMate {
     width: 12px;
     height: 12px;
-    margin-bottom: 5px; } }
+    margin-bottom: 5px; }
+  .textoNuestraHistoria p {
+    font-size: 14px; } }
 
 #logoHover {
   padding: 0%; }

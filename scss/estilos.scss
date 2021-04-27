@@ -483,6 +483,7 @@ footer {
 #descripcionCatalogo {
     padding: 0px 20px 20px;
     height: 80vh;
+    margin-bottom: 80px;
     p {
         font-size: 20px;
         line-height: 22px;
@@ -494,6 +495,7 @@ footer {
     border-radius: 45px 45px 45px 45px;
 
     padding-top: 10px;
+
     list-style: none;
     width: auto;
 
@@ -632,8 +634,8 @@ footer {
 
 .informacionUtil {
     p {
-        font-size: 18px;
-        line-height: 20px;
+        font-size: 16px;
+        line-height: 18px;
         text-align: center;
 
         padding: 5px 0px;
@@ -671,7 +673,7 @@ footer {
     .contenedorInfo__pregunta {
         @extend .negrita;
 
-        font-size: 18px;
+        font-size: 16px;
 
         background-color: $color-rosa-principal;
         padding: 10px 0px;
@@ -963,6 +965,11 @@ footer {
         width: 12px;
         height: 12px;
         margin-bottom: 5px;
+    }
+    .textoNuestraHistoria {
+        p {
+            font-size: 14px;
+        }
     }
 }
 
